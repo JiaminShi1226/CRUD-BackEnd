@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { Campus } = require("../db/models");
+const { Campus } = require("../../db/models");
 
 router.get("/", async (req, res, next) => {
   try {
@@ -9,7 +9,7 @@ router.get("/", async (req, res, next) => {
       ? res.status(200).json(allCampuses)
       : res.status(404).send("Campus List Not Found");
   } catch (error) {
-   next(error);
+    next(error);
   }
 });
 
