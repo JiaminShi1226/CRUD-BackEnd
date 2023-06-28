@@ -1,8 +1,8 @@
 const router = require("express").Router();
 
 // Mounted on /api/
-router.use("/campuses" , reuqire("./campuses"));
-router.use("/students", reuqire("./students"));
+router.use("/campuses" , require("./campuses"));
+router.use("/students", require("./students"));
 
 router.use((req, res, next) => {
    const error = new Error("404 Not Found");
