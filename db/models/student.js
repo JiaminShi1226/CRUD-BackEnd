@@ -27,14 +27,17 @@ const Student = db.define('student',{
           },
     },
     email:{
-        type:DataTypes.email,
+        type:DataTypes.STRING,
         allowNull:false,
         validate: {
+            isEmail: {
+                msg: "must be a valid email",
+            },
             notEmpty: true,
           },
     },
     imageUrl:{
-        type:DataTypes.imageUrl,
+        type:DataTypes.STRING,
         defaultValue:"https://i.stack.imgur.com/l60Hf.png",
     },
     gpa:{
