@@ -15,14 +15,23 @@ const Student = db.define('student',{
     firstName:{
         type:DataTypes.STRING,
         allowNull: false,
+        validate: {
+            notEmpty: true,
+          },
     },
     lastName:{
         type:DataTypes.STRING,
         allowNull:false,
+        validate: {
+            notEmpty: true,
+          },
     },
     email:{
         type:DataTypes.email,
         allowNull:false,
+        validate: {
+            notEmpty: true,
+          },
     },
     imageUrl:{
         type:DataTypes.imageUrl,
@@ -34,7 +43,8 @@ const Student = db.define('student',{
         default: 0,
         validate:{
             min:0,
-            max:4
+            max:4,
+            notEmpty: true,
         }
     }
 })
