@@ -47,4 +47,6 @@ const Student = db.define('student',{
             notEmpty: true,
         }
     }
-})
+});
+
+module.exports = Student;
