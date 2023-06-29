@@ -1,7 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const {Student} = require("../../db/models");
+
 //Send a response will all the student from database when requested
+//http://localhost:8080/api/students/getAllStudents
 router.get("/",async(req,res,next)=>{
     console.log("Get all student hit");
     try {
@@ -11,7 +13,7 @@ router.get("/",async(req,res,next)=>{
         ?res.status(202).json(allStudents) //if allStudent is truthy
         :res.status(404).send("Student List Not Found"); //if allStudent is falsey
     } catch (error) {
-        console.log("error");
+        next(error);
     }
 });
 
