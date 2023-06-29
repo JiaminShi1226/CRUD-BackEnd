@@ -2,7 +2,7 @@ const router = require("express").Router();
 const {Student} = require("../../db/models");
 //remove student based on their id
 //http://localhost:8080/api/students/removeStudentByID/:id
-router.use("/:id", async(req, res, next)=>{
+router.delete("/:id", async(req, res, next)=>{
     try {
        const student = await Student.destroy({where: {id: req.params.id}});
         student
