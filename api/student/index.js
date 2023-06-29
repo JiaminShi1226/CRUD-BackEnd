@@ -7,6 +7,7 @@ router.use("/addStudent", require("./addStudent"));
 router.use("/getAllStudents", require("./getAllStudents"));
 router.use("/getStudentByID", require("./getStudentByID"));
 router.use("/removeStudentByID", require("./removeStudentByID"));
+router.use("/editStudentByID", require("./editStudentByID"));
 
 router.use((req, res, next) => {
   const error = new Error("404 Not Found");
