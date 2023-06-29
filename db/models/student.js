@@ -49,6 +49,9 @@ const Student = db.define('student',{
             max:4,
             notEmpty: true,
         }
+    },
+    campusId:{
+        type:DataTypes.INTEGER,
     }
 });
 
