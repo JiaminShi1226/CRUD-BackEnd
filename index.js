@@ -1,9 +1,13 @@
 const express = require("express");
 const db = require("./db");
 const PORT = "8080";
+const cors = require("cors");
+
 
 const app = express();
 app.use(express.json());
+app.use(cors());
+
 // Mount on API
 app.use("/api", require("./api"));
 
