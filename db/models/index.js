@@ -1,12 +1,10 @@
 const Student = require("./student");
 const Campus = require("./campus");
 
-Campus.hasMany(Student);
-Student.belongsTo(Campus, {
-  foreignKey: {
-    allowNull: true,
-  },
+Campus.hasMany(Student,{
+  foreignKey: "campusId",
 });
+Student.belongsTo(Campus);
 
 module.exports = {
  Student,
