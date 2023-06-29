@@ -1,6 +1,6 @@
 const router = require("express").Router();
 
-// Mounted on /api/campus
+// Mounted on /api/campuses
 router.use("/getAllCampuses", require("./getAllCampuses"));
 router.use("/addCampus", require("./addCampus"));
 router.use("/getCampusByID", require("./getCampusByID"));
