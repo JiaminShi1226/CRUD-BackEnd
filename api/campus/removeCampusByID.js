@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { Campus } = require("../../db/models");
 
-//http://localhost:8080/api/campuses/removeCampus/:id
+//http://localhost:8080/api/campuses/removeCampusByID/:id
 router.delete("/:id", async (req, res, next) => {
   try {
     const RemoveCampus = await Campus.destroy({ where: {id: req.params.id}});
