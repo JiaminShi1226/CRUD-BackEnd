@@ -4,7 +4,7 @@ const Campus = require("./campus");
 Campus.hasMany(Student);
 Student.belongsTo(Campus, {
   foreignKey: {
-    allowNull: false,
+    allowNull: true,
   },
 });
 
