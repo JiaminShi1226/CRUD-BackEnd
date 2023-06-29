@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { Campus } = require("../../db/models");
 
+//http://localhost:8080/api/campuses/addCampus
 router.post("/", async (req, res, next) => {
   try {
     const { name, imageUrl, address, description } = req.body;
