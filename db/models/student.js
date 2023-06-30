@@ -38,6 +38,7 @@ const Student = db.define('student',{
     },
     imageUrl:{
         type:DataTypes.STRING,
+        allowNull: false,
         defaultValue:"https://i.stack.imgur.com/l60Hf.png",
     },
     gpa:{
