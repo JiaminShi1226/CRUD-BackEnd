@@ -5,14 +5,14 @@ const seedCampus = [
   {
     name: "Brooklyn College",
     imageUrl:
-      "https://cdn.vanderbilt.edu/vu-URL/wp-content/uploads/sites/288/2019/03/19223634/Image-Coming-Soon-Placeholder.png",
+      "https://www.brooklyn.cuny.edu/web/com_socialImages/BrooklynCollegeLibrary_1200x628.jpg",
     address: "666 main ST",
     description: "Brooklyn College",
   },
   {
     name: "Hunter College",
     imageUrl:
-      "https://cdn.vanderbilt.edu/vu-URL/wp-content/uploads/sites/288/2019/03/19223634/Image-Coming-Soon-Placeholder.png",
+      "https://ih1.redbubble.net/image.829944293.5101/st,small,507x507-pad,600x600,f8f8f8.jpg",
     address: "123 prince ST",
     description: "Hunter College",
   },
