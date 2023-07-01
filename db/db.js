@@ -16,5 +16,11 @@ const db = new Sequelize(`${process.env.REACT_APP_DATABASE}`, {
 });
 
 
+// const db = new Sequelize(`postgres://postgres:TashiShyangba23@localhost:5432/${name}`, {
+//   logging: false,
+// });
+
+
+
 
 module.exports = db;
