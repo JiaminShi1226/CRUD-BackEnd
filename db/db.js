@@ -15,6 +15,7 @@ const db = new Sequelize(`${process.env.REACT_APP_DATABASE}`, {
   logging: false,
 });
 
+console.log(process.env.REACT_APP_TEST);
 
 // const db = new Sequelize(`postgres://postgres:TashiShyangba23@localhost:5432/${name}`, {
 //   logging: false,
