@@ -11,6 +11,7 @@ const db = require("../db");
     }
 */
 
+<<<<<<< HEAD
 const Student = db.define("student", {
   firstName: {
     type: DataTypes.STRING,
@@ -57,3 +58,51 @@ const Student = db.define("student", {
 });
 
 module.exports = Student;
+=======
+const Student = db.define('student',{
+    firstName:{
+        type:DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: true,
+          },
+    },
+    lastName:{
+        type:DataTypes.STRING,
+        allowNull:false,
+        validate: {
+            notEmpty: true,
+          },
+    },
+    email:{
+        type:DataTypes.STRING,
+        allowNull:false,
+        validate: {
+            isEmail: {
+                msg: "must be a valid email",
+            },
+            notEmpty: true,
+          },
+    },
+    imageUrl:{
+        type:DataTypes.STRING,
+        allowNull: false,
+        defaultValue:"https://i.stack.imgur.com/l60Hf.png",
+    },
+    gpa:{
+        type:DataTypes.DECIMAL(3,2),
+        allowNull:false,
+        default: 0,
+        validate:{
+            min:0,
+            max:4,
+            notEmpty: true,
+        }
+    },
+    campusId:{
+        type:DataTypes.INTEGER,
+    }
+});
+
+module.exports = Student;
+>>>>>>> fceafab5ea7890a85b3f052c1756538d9e453e66
