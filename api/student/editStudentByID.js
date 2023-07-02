@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { Student } = require("../../db/models");
 
-router.use("/:id", async (req, res, next) => {
+router.put("/:id", async (req, res, next) => {
   try {
     const { firstName, lastName, email, imageUrl, gpa, campusId } = req.body;
     const updatedStudent = await Student.update(
