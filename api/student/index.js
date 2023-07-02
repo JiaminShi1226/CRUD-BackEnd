@@ -3,11 +3,11 @@ const router = require("express").Router();
 
 // Mounted on /api/students/
 
-router.use("/addStudent", require("./addStudent"));
-router.use("/getAllStudents", require("./getAllStudents"));
-router.use("/getStudentByID", require("./getStudentByID"));
-router.use("/removeStudentByID", require("./removeStudentByID"));
-router.use("/editStudentByID", require("./editStudentByID"));
+router.use("/", require("./addStudent"));
+router.use("/", require("./getAllStudents"));
+router.use("/", require("./getStudentByID"));
+router.use("/", require("./removeStudentByID"));
+router.use("/", require("./editStudentByID"));
 
 router.use((req, res, next) => {
   const error = new Error("404 Not Found");
