@@ -53,6 +53,7 @@ const Student = db.define("student", {
   },
   campusId: {
     type: DataTypes.INTEGER,
+    allowNull: true,
   },
 });
 
