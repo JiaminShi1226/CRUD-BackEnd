@@ -11,7 +11,7 @@ router.put("/:id", async (req, res, next) => {
         email,
         imageUrl,
         gpa,
-        campusId,
+        campusId: campusId || null,
       },
       {
         where: { id: req.params.id },
