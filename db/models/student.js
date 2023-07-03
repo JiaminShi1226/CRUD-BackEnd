@@ -44,7 +44,7 @@ const Student = db.define("student", {
   gpa: {
     type: DataTypes.DECIMAL(3, 2),
     allowNull: false,
-    default: 0,
+    defaultValue: 0,
     validate: {
       min: 0,
       max: 4,
