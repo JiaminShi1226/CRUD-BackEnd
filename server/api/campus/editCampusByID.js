@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const { Campus } = require("../../db/models");
 
-
 //http://localhost:8080/api/campuses/editCampusByID/id
 router.put("/:id", async (req, res, next) => {
   try {
