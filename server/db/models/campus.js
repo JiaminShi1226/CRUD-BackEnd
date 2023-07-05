@@ -23,7 +23,7 @@ const Campus = db.define("campus", {
     },
   },
   description: {
-    type: DataTypes.STRING,
+    type: DataTypes.TEXT,
     allowNull: false,
     validate: {
       notEmpty: true,
